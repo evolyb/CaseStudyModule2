@@ -1,7 +1,7 @@
 package view;
 
-import controller.MenuService;
 import controller.Menu;
+import controller.MenuService;
 import service.IService;
 
 import java.util.ArrayList;
@@ -19,6 +19,5 @@ public class Main {
             System.out.println();
             MenuService.show(listMenu.get(listMenu.size()-1));
         }
-
     }
 }

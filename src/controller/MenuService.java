@@ -1,5 +1,6 @@
 package controller;
 
+import service.MatchService;
 import service.PlayerService;
 import service.TeamService;
 import view.Main;
@@ -38,6 +39,7 @@ public class MenuService {
 
         Menu leagueMenu = new Menu("LeagueManagement");
         leagueMenu.add(new Menu("Show Fixture"));
+        leagueMenu.add(new Menu("Show Rank"));
         mainMenu.add(playerMenu);
         mainMenu.add(teamMenu);
         mainMenu.add(leagueMenu);
@@ -55,6 +57,7 @@ public class MenuService {
                     switch (selection){
                         case 1-> Main.iService = new PlayerService();
                         case 2-> Main.iService = new TeamService();
+                        case 3-> Main.iService = new MatchService();
                     }
                 }
             }

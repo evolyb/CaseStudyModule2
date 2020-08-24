@@ -42,7 +42,14 @@ public class TeamView {
             if (coach.equals("")) System.out.println("Coach is not Null");
             else break;
         } while (true);
-        return new Team(id,name,province,coach);
+        String stadium;
+        do{
+            System.out.print("Stadium: ");
+            stadium = scanner.nextLine();
+            if (stadium.equals("")) System.out.println("Stadium is not Null");
+            else break;
+        } while (true);
+        return new Team(id,name,province,coach,stadium);
     }
     public static Team showEditForm(){
         int id;
@@ -68,7 +75,9 @@ public class TeamView {
         String province = scanner.nextLine();
         System.out.print("Coach: ");
         String coach = scanner.nextLine();
-        return new Team(id,name,province,coach);
+        System.out.print("Stadium: ");
+        String stadium = scanner.nextLine();
+        return new Team(id,name,province,coach,stadium);
     }
     public static void showListTeams(List<Team> lists){
         if (lists.size() == 0) {

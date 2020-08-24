@@ -34,7 +34,6 @@ public class Menu implements Serializable {
     public Menu getMenu(int index){
         return lists.get(index);
     }
-
     public String getName() {
         return name;
     }

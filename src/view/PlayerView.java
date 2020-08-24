@@ -57,20 +57,18 @@ public class PlayerView {
             System.out.print("Height (m): ");
             try{
                 height = Double.parseDouble(scanner.nextLine());
-                break;
-            } catch (Exception e){
-                System.out.println("Invalid input for height");
-            }
+                if (height>0 && height<=3) break;
+            } catch (Exception ignored){}
+            System.out.println("Invalid input for height.");
         } while (true);
         double weight;
         do{
             System.out.print("Weight (kg): ");
             try{
                 weight = Double.parseDouble(scanner.nextLine());
-                break;
-            } catch (Exception e){
-                System.out.println("Invalid input for weight");
-            }
+                if (weight>0 && weight<=200) break;
+            } catch (Exception ignored){}
+            System.out.println("Invalid input for weight");
         } while (true);
         String position;
         do{
@@ -161,10 +159,9 @@ public class PlayerView {
             if (input.equals("")) break;
             try{
                 height = Double.parseDouble(input);
-                break;
-            } catch (Exception e){
-                System.out.println("Invalid input for height");
-            }
+                if (height >0 && height<=3) break;
+            } catch (Exception ignored){}
+            System.out.println("Invalid input for height");
         } while (true);
         double weight =-1;
         do{
@@ -173,10 +170,9 @@ public class PlayerView {
             if (input.equals("")) break;
             try{
                 weight = Double.parseDouble(input);
-                break;
-            } catch (Exception e){
-                System.out.println("Invalid input for weight");
-            }
+                if (weight>0 && weight<=300) break;
+            } catch (Exception ignored){}
+            System.out.println("Invalid input for weight");
         } while (true);
         String position = "";
         do{
